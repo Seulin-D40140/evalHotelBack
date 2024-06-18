@@ -11,7 +11,7 @@ import java.util.Collection;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor @ToString
-public class Gerant
+public class appUser
 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
