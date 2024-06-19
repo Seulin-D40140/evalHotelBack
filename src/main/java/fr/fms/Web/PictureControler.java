@@ -6,6 +6,7 @@ import fr.fms.entity.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -14,6 +15,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 
 @CrossOrigin("*")
 @RestController
@@ -79,4 +81,22 @@ public class PictureControler
         }
         return ResponseEntity.ok().body(file);
     }
+
+    @PostMapping(path = "/photo/{id}")
+    public ResponseEntity<?> uploadPhoto (MultipartFile file , @PathVariable Long id ) throws Exception
+    {
+        try
+        {
+            Hotel hotel = hotelService.getHotelByid(id).get();
+            hotel.setImgName(file.getOriginalFilename());
+            Files.write(Paths.get(System.getProperty("user.home") + "/Pictures/trainings/" + hotel.getImgName()), file.getBytes());
+            hotelService.saveHotel(hotel);
+        }
+        catch (Exception e)
+        {
+            System.out.println("error upload photo");
+        }
+        return ResponseEntity.ok().build();
+    }
 }
+

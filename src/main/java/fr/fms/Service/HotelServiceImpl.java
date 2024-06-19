@@ -30,6 +30,9 @@ public class HotelServiceImpl implements HotelService
     }
 
     @Override
+    public Optional<City> findCityById(Long id) { return cityRepository.findById(id); }
+
+    @Override
     public  List<Hotel> getHotelByCity(Long id) { return hotelRepository.findByCityId(id); }
 
     @Override
@@ -38,4 +41,9 @@ public class HotelServiceImpl implements HotelService
     @Override
     public List<Hotel> getByNameContains(String description)
     { return hotelRepository.findByNameContains(description); }
+
+    @Override
+    public Hotel saveHotel(Hotel hotel) {
+        return hotelRepository.save(hotel);
+    }
 }
