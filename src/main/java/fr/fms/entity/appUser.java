@@ -15,10 +15,9 @@ public class appUser
 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
     private String username;
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<Role> roles = new ArrayList<>();
+    private Collection<appRole> appRoles = new ArrayList<>();
 }

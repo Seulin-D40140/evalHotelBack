@@ -17,7 +17,6 @@ public class HotelControler
 
     @GetMapping("/hotels")
     public List<Hotel> allHotels(){
-        List <Hotel> lT = hotelService.getHotels();
         return hotelService.getHotels();
     }
 
@@ -29,13 +28,11 @@ public class HotelControler
 
     @GetMapping("/searchByKey/{key}")
     public List<Hotel> index( @PathVariable("key") String kw) {
-        List<Hotel> hotel = hotelService.getByNameContains(kw);
         return hotelService.getByNameContains(kw);
     }
 
     @GetMapping("/hotelById/{id}")
     public Optional<Hotel> index(@PathVariable("id") Long id) {
-        Optional<Hotel> hotel = hotelService.getHotelByid(id);
         return hotelService.getHotelByid(id);
     }
 }
