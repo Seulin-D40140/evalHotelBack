@@ -46,4 +46,9 @@ public class HotelServiceImpl implements HotelService
     public Hotel saveHotel(Hotel hotel) {
         return hotelRepository.save(hotel);
     }
+
+    @Override
+    public City saveCity(City city) {
+        return cityRepository.save(city);
+    }
 }

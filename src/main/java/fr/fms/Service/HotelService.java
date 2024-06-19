@@ -11,6 +11,7 @@ public interface HotelService
     List<Hotel> getHotels();
     Hotel saveHotel(Hotel hotel);
     List<City> getCitys();
+    City saveCity(City city);
     Optional<City> findCityById(Long id);
     List<Hotel> getHotelByCity(Long id);
     Optional<Hotel> getHotelByid(Long id);
