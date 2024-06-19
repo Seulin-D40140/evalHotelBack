@@ -89,7 +89,7 @@ public class PictureControler
         {
             Hotel hotel = hotelService.getHotelByid(id).get();
             hotel.setImgName(file.getOriginalFilename());
-            Files.write(Paths.get(System.getProperty("user.home") + "/Pictures/trainings/" + hotel.getImgName()), file.getBytes());
+            Files.write(Paths.get(System.getProperty("user.home") + "/Pictures/Hotels/" + hotel.getImgName()), file.getBytes());
             hotelService.saveHotel(hotel);
         }
         catch (Exception e)
