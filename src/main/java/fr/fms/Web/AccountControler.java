@@ -21,10 +21,10 @@ public class AccountControler {
         return this.accountService.listUser();
     }
 
-//    @PostMapping("/users")
-//    public appUser postUser(@RequestBody appUser user){
-//        return this.accountService.saveUser(user);
-//    }
+    @PostMapping("/users")
+    public appUser postUser(@RequestBody appUser user){
+        return this.accountService.saveUser(user);
+    }
 //
 //    @PostMapping("/roles")
 //    public Role postRole(@RequestBody Role role){
