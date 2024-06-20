@@ -16,4 +16,5 @@ public interface HotelService
     List<Hotel> getHotelByCity(Long id);
     Optional<Hotel> getHotelByid(Long id);
     List<Hotel> getByNameContains(String description);
+    void deleteHotel(Long id);
 }

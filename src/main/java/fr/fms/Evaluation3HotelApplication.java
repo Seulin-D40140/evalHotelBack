@@ -20,12 +20,6 @@ public class Evaluation3HotelApplication implements CommandLineRunner {
 	HotelRepository hotelRepository;
 
 	@Autowired
-	RoleRepository roleRepository;
-
-	@Autowired
-	UserRepository userRepository;
-
-	@Autowired
 	AccountServiceImpl accountService;
 
 	public static void main(String[] args) {
@@ -75,8 +69,8 @@ public class Evaluation3HotelApplication implements CommandLineRunner {
 		accountService.saveRole(new appRole(null , "USER"));
 		accountService.saveRole(new appRole(null , "GERANT"));
 		accountService.addRoleToUser("isha", "USER");
-		accountService.addRoleToUser("angel", "ADMIN");
-		accountService.addRoleToUser("nel", "GERANT");
+		accountService.addRoleToUser("nel", "ADMIN");
+		accountService.addRoleToUser("angel", "GERANT");
 		accountService.addRoleToUser("bubba", "GERANT");
 	}
 

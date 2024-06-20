@@ -51,4 +51,9 @@ public class HotelServiceImpl implements HotelService
     public City saveCity(City city) {
         return cityRepository.save(city);
     }
+
+    @Override
+    public void deleteHotel(Long id) {
+        hotelRepository.deleteById(id);
+    }
 }

@@ -54,4 +54,15 @@ public class HotelControler
                 .toUri();
         return ResponseEntity.created(location).body(hotelo);
     }
+
+    @GetMapping("/hotelDelete/{id}")
+    public ResponseEntity<Void>deleteTraining(@PathVariable("id") Long id)
+    {
+        Optional<Hotel> getHotel = hotelService.getHotelByid(id);
+        if(getHotel.isPresent())
+        {
+            hotelService.deleteHotel(getHotel.get().getId());
+        }
+        return ResponseEntity.noContent().build();
+    }
 }

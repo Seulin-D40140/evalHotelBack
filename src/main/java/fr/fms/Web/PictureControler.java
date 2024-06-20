@@ -83,8 +83,7 @@ public class PictureControler
     }
 
     @PostMapping(path = "/photo/{id}")
-    public ResponseEntity<?> uploadPhoto (MultipartFile file , @PathVariable Long id ) throws Exception
-    {
+    public ResponseEntity<?> uploadPhoto (MultipartFile file , @PathVariable Long id ) {
         try
         {
             Hotel hotel = hotelService.getHotelByid(id).get();
