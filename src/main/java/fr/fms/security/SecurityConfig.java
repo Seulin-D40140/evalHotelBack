@@ -1,6 +1,6 @@
 package fr.fms.security;
 
-import fr.fms.Dao.UserRepository;
+import fr.fms.dao.UserRepository;
 import fr.fms.entity.appUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

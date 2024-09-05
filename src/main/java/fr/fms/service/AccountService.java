@@ -1,4 +1,4 @@
-package fr.fms.Service;
+package fr.fms.service;
 
 import fr.fms.entity.appRole;
 import fr.fms.entity.appUser;

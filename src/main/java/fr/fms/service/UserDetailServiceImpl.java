@@ -1,4 +1,4 @@
-package fr.fms.Service;
+package fr.fms.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

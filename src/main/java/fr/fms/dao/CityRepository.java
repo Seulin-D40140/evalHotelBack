@@ -1,4 +1,4 @@
-package fr.fms.Dao;
+package fr.fms.dao;
 
 import fr.fms.entity.City;
 import org.springframework.data.jpa.repository.JpaRepository;

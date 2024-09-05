@@ -1,7 +1,7 @@
 package fr.fms;
 
-import fr.fms.Dao.*;
-import fr.fms.Service.AccountServiceImpl;
+import fr.fms.dao.*;
+import fr.fms.service.AccountServiceImpl;
 import fr.fms.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -68,7 +68,7 @@ public class Evaluation3HotelApplication implements CommandLineRunner {
 		accountService.saveRole(new appRole(null , "ADMIN"));
 		accountService.saveRole(new appRole(null , "USER"));
 		accountService.saveRole(new appRole(null , "GERANT"));
-		
+
 		accountService.addRoleToUser("isha", "USER");
 		accountService.addRoleToUser("nel", "ADMIN");
 		accountService.addRoleToUser("angel", "GERANT");

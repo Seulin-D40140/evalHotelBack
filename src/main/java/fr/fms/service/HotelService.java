@@ -1,4 +1,4 @@
-package fr.fms.Service;
+package fr.fms.service;
 
 import fr.fms.entity.City;
 import fr.fms.entity.Hotel;

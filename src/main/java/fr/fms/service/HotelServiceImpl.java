@@ -1,7 +1,7 @@
-package fr.fms.Service;
+package fr.fms.service;
 
-import fr.fms.Dao.CityRepository;
-import fr.fms.Dao.HotelRepository;
+import fr.fms.dao.CityRepository;
+import fr.fms.dao.HotelRepository;
 import fr.fms.entity.City;
 import fr.fms.entity.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;

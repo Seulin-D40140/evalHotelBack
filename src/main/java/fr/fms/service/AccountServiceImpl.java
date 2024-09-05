@@ -1,7 +1,7 @@
-package fr.fms.Service;
+package fr.fms.service;
 
-import fr.fms.Dao.RoleRepository;
-import fr.fms.Dao.UserRepository;
+import fr.fms.dao.RoleRepository;
+import fr.fms.dao.UserRepository;
 import fr.fms.entity.appRole;
 import fr.fms.entity.appUser;
 import lombok.extern.slf4j.Slf4j;

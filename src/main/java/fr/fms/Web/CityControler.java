@@ -1,9 +1,7 @@
 package fr.fms.Web;
 
-import fr.fms.Dao.CityRepository;
-import fr.fms.Service.HotelServiceImpl;
+import fr.fms.service.HotelServiceImpl;
 import fr.fms.entity.City;
-import fr.fms.entity.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
