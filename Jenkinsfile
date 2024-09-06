@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Cloner le dépôt') {
             steps {
-                git 'https://github.com/Seulin-D40140/evalHotelFront'
+                 git url: 'https://github.com/Seulin-D40140/evalHotelFront.git', branch: 'main'
             }
         }
 
